@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>登录页面 </title>
+	<link rel="stylesheet" media="screen" href="css/dmaku.main.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="referrer" content="origin">
+	<script type="text/javascript">
+
+		var path = [[${imagePath}]];
+		var ans = [[${answer}]];
+	</script>
+</head>
+
+<body onload="load();">
+	<div class="wrapper">
+		<div class="top_wrapper">
+			<div class="container">
+				<div class="col-sm-12 header"><img src="images/logo.png" width="140" height="37" class="retina" /></div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 login_content_wrapper">
+					<div class="content_wrapper">
+						<h1 class="title">登录到您的帐户</h1>
+						<form class="new_user_session" id="new_user_session" action="/login" accept-charset="UTF-8" ><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LRPFYc5H4DbwRFnREEZDHBjUgUO16rwDKxkGlB1b4nUr3A57ndoPZ55ODZ4dTERZ5vlxPvcSYjGRysTZqb78pw==" />
+							<div class="form-group">
+								<label for="user_name">用户名</label>
+								<input autofocus="autofocus" class="form-control" type="name" value="" name="name" id="user_name" />
+							</div>
+							<div class="form-group">
+								<label for="user_password">密码</label>
+								<input autocomplete="off" class="form-control" type="password" name="password" id="user_password" />
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="col-sm-12 header"><img src id="captchaImage" width="100" height="40" class="retina" /></div>
+									</div>
+									<div class="col-xs-12 col-sm-6 text-right">
+										<input autofocus="autofocus" class="form-control" type="name" value="" name="text" id="textCaptcha" />
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-6">
+										<input name="user[remember_me]" type="hidden" value="0" /><input id="user_session_remember_me" type="checkbox" value="1" name="user[remember_me]" />
+										<label for="user_session_remember_me" style="font-size:13px;font-weight:normal;">记住帐号</label>
+									</div>
+									<div class="col-xs-12 col-sm-6 text-right">
+										<input class="btn btn-default btn-success" value="登 入" type="submit" />
+									</div>
+								</div>
+							</div>
+							<div class="from-group">
+								<div class="row forgot_password">
+									<div class="col-sm-12">
+										<a href="">忘记密码</a><a style="float:right;" href="">注册新帐号</a>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<p class="copyright">&copy; 2023 </p>
+				</div>
+			</div>
+		</div>
+	</div>
+<style>
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+</style>
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		$("#captchaImage").attr("src","/images/captcha/8746_MSJF.jpg");
+
+		alert(path);
+	}
+
+</script>
+</html>
